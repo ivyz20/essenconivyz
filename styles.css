@@ -206,6 +206,18 @@ body {
     font-size: 1.1rem;
   }
 
+/* Espacio para que el título no quede pegado al menú */
+.hero {
+  margin-top: 120px; /* Ajusta si querés más o menos */
+}
+
+/* En móvil un poquito más */
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 140px;
+  }
+
+
 
 
 
