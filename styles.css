@@ -233,10 +233,11 @@ section, .hero, footer {
   .menu li {
     margin-bottom: 6px;
   }
-}
+
 
 /* Si querés una solución más limpia: ocultar el menú en móvil y mostrar
    un botón "hamburger". Puedo agregarte eso si querés. */
+
 
 
 
