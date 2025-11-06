@@ -218,6 +218,28 @@ body {
   }
 }
 
+/* --- ARREGLO REAL DEL ESPACIADO MÓVIL --- */
+.nav-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #ffffffd9;
+  backdrop-filter: blur(8px);
+  z-index: 999;
+  padding: 14px 6%;
+}
+
+/* Que el contenido no quede tapado por el menú */
+.hero {
+  margin-top: 140px; /* Ajuste para que el título baje */
+}
+
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 180px; /* Un poco más en celular */
+  }
+}
+
 
 
 
