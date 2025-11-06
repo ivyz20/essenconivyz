@@ -1,0 +1,182 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* TIPOGRAFÍA */
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background-color:#fff0f5;
+  color: #333;
+}
+
+/* NAVEGACIÓN */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: #fff5f0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #ff6f61;
+}
+
+.logo span {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #ff6f61;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px;
+  background: url('img/fondo-cocina.jpg') center/cover no-repeat;
+  color: #fff;
+  position: relative;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.4); /* fondo semi-transparente para mejor legibilidad */
+  padding: 30px 25px;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+.hero-content h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* sombra para destacar texto */
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+.banner-logo {
+  width: 250px; /* más grande */
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 25px;
+}
+
+
+/* BOTONES */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #ff6f61;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ff4a3a;
+  transform: scale(1.05);
+}
+
+/* SECCIONES */
+.section {
+  padding: 60px 10%;
+}
+
+.bg-light {
+  background-color: #ffeef2;
+}
+
+h2 {
+  font-family: 'Great Vibes', cursive;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* GRID CARDS y PROMOS */
+.promo {
+  text-align: center;
+  background-color: #ffe6e0;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+/* CONTACTO */
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.contact-links a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #ff6f61;
+  transition: color 0.3s ease;
+}
+
+.contact-links a:hover {
+  color: #ff4a3a;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffeef2;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+/* ANIMACIONES */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
