@@ -178,67 +178,51 @@ footer {
   transform: translateY(0);
 }
 
-/* --- ARREGLO DE ESPACIADO EN MÓVIL PARA QUE NO SE PEGUE EL TÍTULO --- */
-header {
+/* --- ARREGLO DE ESPACIADO EN MÓVIL CORRECTO --- */
+
+.nav-container {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   background: #ffffffd9;
   backdrop-filter: blur(8px);
   z-index: 999;
+  padding: 14px 8%;
 }
 
-/* Que el contenido no quede tapado por el header */
+/* Que el contenido no quede tapado por el menú */
 body {
-  padding-top: 90px;
+  padding-top: 120px;
+}
+
+/* Ajuste para que el hero no quede pegado */
+.hero {
+  margin-top: 0;
 }
 
 @media (max-width: 768px) {
   body {
-    padding-top: 110px; /* más espacio en celu */
+    padding-top: 160px;
+  }
+
+  .hero {
+    margin-top: 20px; /* Este es el ajuste correcto */
   }
 
   .hero-content h2 {
-    font-size: 1.9rem;
+    font-size: 2.2rem;
   }
 
   .hero-content p {
     font-size: 1.1rem;
   }
 
-/* Espacio para que el título no quede pegado al menú */
-.hero {
-  margin-top: 120px; /* Ajusta si querés más o menos */
-}
-
-/* En móvil un poquito más */
-@media (max-width: 768px) {
-  .hero {
-    margin-top: 140px;
+  .banner-logo {
+    width: 200px;
   }
 }
 
-/* --- ARREGLO REAL DEL ESPACIADO MÓVIL --- */
-.nav-container {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #ffffffd9;
-  backdrop-filter: blur(8px);
-  z-index: 999;
-  padding: 14px 6%;
-}
-
-/* Que el contenido no quede tapado por el menú */
-.hero {
-  margin-top: 140px; /* Ajuste para que el título baje */
-}
-
-@media (max-width: 768px) {
-  .hero {
-    margin-top: 180px; /* Un poco más en celular */
-  }
-}
 
 
 
