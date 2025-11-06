@@ -178,6 +178,66 @@ footer {
   transform: translateY(0);
 }
 
+/* --- ARREGLO MÓVIL: evitar superposición del header y mejorar espaciado --- */
+:root {
+  --nav-height: 72px; /* altura del header sticky (ajustable) */
+}
+
+/* Asegura que al hacer ancla (click en menú) el contenido no quede oculto */
+section, .hero, footer {
+  scroll-margin-top: calc(var(--nav-height) + 16px);
+}
+
+/* Añade padding superior al hero para que el título no quede pegado al nav */
+.hero {
+  padding-top: calc(var(--nav-height) + 30px);
+  padding-bottom: 60px; /* más aire debajo */
+}
+
+/* Ajustes para que el título y texto respiren en pantallas chicas */
+@media (max-width: 768px) {
+  :root { --nav-height: 64px; } /* nav más compacto en móvil */
+
+  .nav-container {
+    padding: 14px 6%;
+  }
+
+  .hero {
+    padding-top: calc(var(--nav-height) + 18px);
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .hero-content h2 {
+    font-size: 2.2rem; /* más pequeño para móvil */
+    line-height: 1.05;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .banner-logo {
+    width: 200px; /* reduce un poco en móvil para que no empuje todo */
+    max-width: 70%;
+  }
+
+  /* Evita que el menú horizontal ocupe y rompa el layout en pantallas chicas:
+     lo deja en dos líneas y centra */
+  .menu {
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menu li {
+    margin-bottom: 6px;
+  }
+}
+
+/* Si querés una solución más limpia: ocultar el menú en móvil y mostrar
+   un botón "hamburger". Puedo agregarte eso si querés. */
+
 
 
 
