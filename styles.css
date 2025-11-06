@@ -178,61 +178,35 @@ footer {
   transform: translateY(0);
 }
 
-/* --- ARREGLO MÓVIL: evitar superposición del header y mejorar espaciado --- */
-:root {
-  --nav-height: 72px; /* altura del header sticky (ajustable) */
+/* --- ARREGLO DE ESPACIADO EN MÓVIL PARA QUE NO SE PEGUE EL TÍTULO --- */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #ffffffd9;
+  backdrop-filter: blur(8px);
+  z-index: 999;
 }
 
-/* Asegura que al hacer ancla (click en menú) el contenido no quede oculto */
-section, .hero, footer {
-  scroll-margin-top: calc(var(--nav-height) + 16px);
+/* Que el contenido no quede tapado por el header */
+body {
+  padding-top: 90px;
 }
 
-/* Añade padding superior al hero para que el título no quede pegado al nav */
-.hero {
-  padding-top: calc(var(--nav-height) + 30px);
-  padding-bottom: 60px; /* más aire debajo */
-}
-
-/* Ajustes para que el título y texto respiren en pantallas chicas */
 @media (max-width: 768px) {
-  :root { --nav-height: 64px; } /* nav más compacto en móvil */
-
-  .nav-container {
-    padding: 14px 6%;
-  }
-
-  .hero {
-    padding-top: calc(var(--nav-height) + 18px);
-    padding-left: 6%;
-    padding-right: 6%;
+  body {
+    padding-top: 110px; /* más espacio en celu */
   }
 
   .hero-content h2 {
-    font-size: 2.2rem; /* más pequeño para móvil */
-    line-height: 1.05;
+    font-size: 1.9rem;
   }
 
   .hero-content p {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
+}
 
-  .banner-logo {
-    width: 200px; /* reduce un poco en móvil para que no empuje todo */
-    max-width: 70%;
-  }
-
-  /* Evita que el menú horizontal ocupe y rompa el layout en pantallas chicas:
-     lo deja en dos líneas y centra */
-  .menu {
-    gap: 14px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .menu li {
-    margin-bottom: 6px;
-  }
 
 
 
