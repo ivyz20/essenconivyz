@@ -234,6 +234,62 @@ section, .hero, footer {
     margin-bottom: 6px;
   }
 
+/* --- MENÚ HAMBURGUESA --- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+}
+
+.hamburger span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: #333;
+  transition: 0.3s;
+}
+
+/* Estado menú visible */
+.menu.show {
+  display: flex !important;
+}
+
+/* --- VISTA MÓVIL --- */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .menu {
+    position: absolute;
+    top: 72px;
+    right: 0;
+    width: 100%;
+    background: #ffffffd9;
+    backdrop-filter: blur(8px);
+    flex-direction: column;
+    text-align: center;
+    display: none;
+    padding: 20px 0;
+  }
+
+  .menu li {
+    margin: 14px 0;
+  }
+
+  /* Animación del ícono */
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+
 
 
 
